@@ -1,61 +1,24 @@
-package JVMConcepts;
+package ExceptionsStringConcepts;
 import java.util.*;
 public class Assignment4 {
+static boolean isPal(String s) {
+	int i =0;
+	int j = s.length()-1;
+	while(i<j) {
+		if(s.charAt(i)!=s.charAt(j))
+			return false;
+		i++;
+		j--;
+	}
+	return true;
+}
 public static void main(String[] args) {
-	Scanner s = new Scanner(System.in);
-	int n = s.nextInt();
-	switch (n) {
-	case 1: {
-		System.out.println("January");
-		break;
-	}
-	case 2:{
-		System.out.println("February");
-		break;
-		
-	}
-	case 3:{
-		System.out.println("March");
-		break;
-	}
-	case 4:{
-		System.out.println("April");
-		break;
-	}
-	case 5:{
-		System.out.println("May");
-		break;
-	}
-	case 6:{
-		System.out.println("June");
-		break;
-	}
-	case 7:{
-		System.out.println("July");
-		break;
-	}
-	case 8:{
-		System.out.println("August");
-		break;
-	}
-	case 9:{
-		System.out.println("September");
-		break;
-	}
-	case 10:{
-		System.out.println("October");
-		break;
-	}
-	case 11:{
-		System.out.println("November");
-		break;
-	}
-	case 12:{
-		System.out.println("December");
-		break;
-	}
-	default:
-		System.out.println("Invalid Month");
-	}
+	Scanner sc = new Scanner(System.in);
+	String s = sc.nextLine();
+	String t = s.toLowerCase();
+	if(isPal(t))
+		System.out.println("The String is Palindrome");
+	else
+		System.out.println("The String is not Palindrome");
 }
 }
